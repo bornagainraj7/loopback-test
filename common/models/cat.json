@@ -1,0 +1,46 @@
+{
+  "name": "cat",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "scopes": {
+    "calico": {
+      "where": {
+        "breed": "calico"
+      }
+    },
+    "oldCats": {
+      "where": {
+        "age": {
+          "gt": 10
+        }
+      }
+    },
+    "someCats": {
+      "limit": 10
+    }
+  },
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "breed": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
